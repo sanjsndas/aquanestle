@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaNestle Cookie Policy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom CSS - Same as index page */
+        :root {
+            --primary-color: #4fc3f7;
+            --secondary-color: #81d4fa;
+            --accent-color: #0288d1;
+            --text-color: #333;
+            --light-bg: #f5fdff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--light-bg);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .nav-link {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent-color);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .water-drop {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: var(--primary-color);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: drip 3s infinite;
+        }
+        
+        @keyframes drip {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+            100% { transform: translateY(0); }
+        }
+        
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem 0;
+        }
+        
+        .content-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .policy-point {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .policy-point h3 {
+            font-size: 1.25rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Cookie Consent Banner */
+        .cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #333;
+            color: white;
+            padding: 1.5rem;
+            z-index: 1000;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .cookie-consent p {
+            margin: 0 1rem 1rem 0;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .cookie-consent-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .cookie-btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .cookie-btn-accept {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+        }
+        
+        .cookie-btn-decline {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+        
+        .cookie-btn-accept:hover {
+            background-color: #0277bd;
+        }
+        
+        .cookie-btn-decline:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="water-drop mr-4"></div>
+                    <span class="text-xl font-semibold text-gray-800">AquaNestle</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600" tabindex="0">Home</a>
+                    <a href="privacy.html" class="nav-link text-gray-600 hover:text-blue-600" tabindex="0">Privacy</a>
+                    <a href="terms.html" class="nav-link text-gray-600 hover:text-blue-600" tabindex="0">Terms & Conditions</a>
+                    <a href="cookies.html" class="nav-link text-blue-600 font-medium" aria-current="page" tabindex="0">Cookies</a>
+                    <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600" tabindex="0">Contact Us</a>
+                </div>
+                <button class="md:hidden text-gray-500 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none", stroke="currentColor", viewBox="0 0 24 24", xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round", stroke-linejoin="round", stroke-width="2", d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Cookie Policy</h1>
+            <p class="text-xl mb-8">Information about how we use cookies on our website</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <!-- Cookies Policy Content -->
+        <section class="content-section">
+            <h2 class="text-2xl font-bold mb-6 text-blue-600">AquaNestle Cookie Policy</h2>
+            <p class="mb-6">Last Updated: January 1, 2023</p>
+            
+            <p class="mb-8">This Cookie Policy explains how AquaNestle Irrigation Services ("we", "us", or "our") uses cookies and similar tracking technologies when you visit our website. By using our website, you consent to the use of cookies as described in this policy. You can manage your cookie preferences at any time through your browser settings or the cookie consent manager on our website.</p>
+
+            <div class="policy-point">
+                <h3>1. What Are Cookies?</h3>
+                <p>Cookies are small text files that are placed on your computer, smartphone, or other device when you visit a website. They are widely used to make websites work more efficiently, as well as to provide information to the website owners. Cookies typically contain anonymous information such as a unique identifier, the site name, and some digits and numbers. They cannot carry viruses or install malware on your device. We use both session cookies (which expire when you close your browser) and persistent cookies (which stay on your device until deleted). Cookies help us understand how our site is being used and improve your browsing experience.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>2. Types of Cookies We Use</h3>
+                <p>We use several types of cookies: Strictly necessary cookies (essential for website functionality), performance cookies (help us improve the site), functionality cookies (remember your preferences), and targeting cookies (used by advertising networks). Each type serves a different purpose: essential cookies cannot be disabled as they are required for the site to function properly, analytics cookies help us understand visitor behavior, preference cookies remember your settings, and marketing cookies help deliver relevant ads. We may also use local storage and tracking pixels as part of our cookie technology.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>3. Strictly Necessary Cookies</h3>
+                <p>These cookies are essential for you to navigate our website and use its features, such as accessing secure areas or making purchases. Without these cookies, services you've asked for like shopping baskets or secure logins cannot be provided. They include cookies that remember your actions as you navigate from page to page, helping avoid the need to reauthenticate or reprocess each action. These cookies don't gather information about you that could be used for marketing purposes and don't remember your preferences beyond your current visit. They are usually set in response to actions you take such as logging in or filling in forms.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>4. Performance Cookies</h3>
+                <p>Performance cookies collect information about how visitors use our website, like which pages are visited most often and if users experience error messages. These cookies don't collect information that identifies a visitor - all information is aggregated and therefore anonymous. We use Google Analytics cookies to help us improve our site by understanding what content is most valuable to our visitors. The data collected includes the number of visitors, where visitors come from, and the pages they visit. This helps us ensure the site is meeting user needs and identify areas for enhancement.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>5. Functionality Cookies</h3>
+                <p>Functionality cookies allow our website to remember choices you make and provide enhanced, more personal features. These cookies can be used to remember your login details, language preference, region selection, or font size settings. They may also be used to provide services you've requested such as watching a video or commenting on a blog. These cookies cannot track your browsing activity on other websites. The information collected may be anonymized and cannot track your browsing activity on other websites. Some videos on our website may use cookies to anonymously gather statistics on how you got there and what videos you visited.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>6. Targeting/Advertising Cookies</h3>
+                <p>These cookies are used to deliver ads more relevant to you and your interests based on your browsing history. They are also used to limit the number of times you see an ad and help measure the effectiveness of advertising campaigns. They are typically placed by advertising networks with our permission. The cookies remember that you've visited a website and this information is shared with other organizations such as advertisers. If you don't allow these cookies, you will experience less targeted advertising. Note that opting out doesn't mean you won't see ads - just that they'll be less relevant.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>7. Third-Party Cookies</h3>
+                <p>Some cookies are set by services that appear on our website but are not under our control. These include cookies from social media platforms (if you share content on social media), embedded videos (like YouTube), and analytics services. Third-party cookies are subject to their respective privacy policies. We don't control how these cookies are used, so we suggest you check their websites for more information about their cookies and how to manage them. We use reasonable efforts to implement only reputable third-party services that respect user privacy, but cannot be responsible for their cookie practices.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>8. How Long Do Cookies Stay On My Device?</h3>
+                <p>The lifespan of a cookie depends on its purpose: Session cookies are temporary and expire when you close your browser. Persistent cookies remain until they expire or you delete them from your browser cache. First-party cookies we set typically last from a few hours up to 2 years. Third-party cookies may have different durations set by their providers. You can manually delete stored cookies through your browser settings at any time. Some cookies refresh each time you visit our website, while others have fixed expiration dates. The expiration period is set when the cookie is created and may vary across different cookie categories.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>9. Managing and Disabling Cookies</h3>
+                <p>You can control and/or delete cookies as you wish through your browser settings. You can delete all cookies that are already on your computer and set most browsers to prevent them from being placed. However, if you do this, you may need to manually adjust some preferences each time you visit our site, and some functionality may not work. Browser settings typically allow you to see what cookies you have and delete them individually or block cookies from particular sites. Each browser is different - check your browser's "Help" menu to learn how to change cookie preferences.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>10. Cookie Consent Manager</h3>
+                <p>Our cookie consent manager tool allows you to selectively choose which categories of cookies you accept. You can access the manager via the button in our cookie notice banner or through a link in the website footer. The tool provides clear information about each cookie category and its purpose. Your preferences are stored in a cookie so we can remember your choices on subsequent visits. If you clear your browser cookies, you'll need to reset your preferences. The tool gives you granular control over non-essential cookies while ensuring essential functionality is maintained.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>11. Impact of Disabling Cookies</h3>
+                <p>If you disable cookies completely, our website may not function properly. Essential features like account logins, shopping carts, and secure transactions may fail. Disabling performance cookies means we can't gather data to improve our site. Rejecting functionality cookies means the site won't remember your preferences. Blocking advertising cookies won't stop ads - they'll just become less relevant. Some embedded content (like videos) might not work without third-party cookies. We recommend keeping strictly necessary cookies enabled for full functionality and selectively disabling others based on your comfort level.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>12. Cookies We Use</h3>
+                <p>Below is a detailed list of all cookies we use on our website with their purpose, category, and duration:</p>
+                <p><strong>Essential:</strong> session_id (end of session), csrf_token (1 year)</p>
+                <p><strong>Performance:</strong> _ga (2 years), _gid (24 hours)</p>
+                <p><strong>Functionality:</strong> language (1 year), font_size (1 year)</p>
+                <p><strong>Advertising:</strong> visitor_id (1 year), fr (3 months)</p>
+                <p>We review our cookie usage quarterly and update this list as needed. If we introduce new cookies significantly different from these, we'll update our policy and notify users through our website.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>13. Do Not Track Signals</h3>
+                <p>Some browsers have a "Do Not Track" feature that lets you tell websites you don't want to have your online activities tracked. Currently, we do not respond to browser "Do Not Track" signals as there's no industry standard for implementation. However, we provide you the tools to control tracking through our cookie consent manager. Even if we receive a Do Not Track signal, essential cookies required for site operation will still be used. We monitor industry developments regarding Do Not Track standards and will revisit this policy if standards emerge.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>14. Cookie Policy Updates</h3>
+                <p>We may update this Cookie Policy from time to time to reflect changes in technology, legislation, or our operations. When we make significant changes, we'll notify you through a notice on our website or other communication channels. The "Last Updated" date at the top indicates when the policy was last revised. We encourage you to review this policy periodically to stay informed about how we use cookies. Your continued use of our website after changes constitutes acceptance of the updated policy.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>15. International Data Transfers</h3>
+                <p>Some of the third-party services we use may transfer cookie data outside your country of residence. For example, Google Analytics stores data in the United States. Where such transfers occur, we ensure appropriate safeguards are in place to protect your data in accordance with this policy and applicable law. The European Commission has determined that certain countries provide adequate data protection. For transfers to other countries, we rely on standard contractual clauses or other approved mechanisms. US-based services may be subject to lawful access by US authorities under certain circumstances.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>16. Your Privacy Rights</h3>
+                <p>Depending on your location, you may have certain rights regarding your personal data collected via cookies, including: Right to access (request copies of your data), right to rectification (correct inaccurate data), right to erasure (request deletion), right to restrict processing, right to data portability, and right to object to processing. You can exercise most of these rights regarding cookies through our cookie consent manager or your browser settings. For other requests or questions about your privacy rights, contact us using the information provided in our Privacy Policy.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3> 17. Contact Us for Cookie Policy Inquiries</h3>
+                <p>If you have any questions or concerns regarding our cookie policy, please feel free to reach out to us. You can contact our customer service team via email at support@aquanestle.com or call us at (123) 456-7890. Our team is available Monday to Friday from 8 AM to 6 PM EST. We are committed to addressing your inquiries promptly and ensuring you have a clear understanding of how we use cookies on our website. Your feedback is valuable to us, and we appreciate your engagement with our policies.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>18. Cookie Policy for Children</h3>
+                <p>Our website is not intended for children under the age of 13. We do not knowingly collect personal information from children. If we become aware that we have collected personal data from a child under 13 without parental consent, we will take steps to delete that information. If you are a parent or guardian and believe your child has provided us with personal information, please contact us. We encourage parents to monitor their children's online activities and educate them about safe internet practices.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>19. Cookie Policy for Employees</h3>
+                <p>This cookie policy also applies to employees of AquaNestle when they use our website for work-related purposes. Employees are expected to adhere to this policy and understand how cookies are used in the context of their work. Training on data privacy and cookie usage is provided to ensure compliance with applicable laws and regulations. Employees should report any concerns regarding cookie usage or data privacy to their supervisor or the HR department. We are committed to maintaining a secure and compliant online environment for all users.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>20. Cookie Policy for Business Partners</h3>
+                <p>Business partners who access our website for collaboration or service provision are also subject to this cookie policy. We encourage our partners to review our cookie practices and ensure they comply with their own data protection obligations. Any data collected through cookies will be handled in accordance with our privacy policy and applicable agreements. We value our partnerships and strive to maintain transparency regarding data usage. If you have questions about how cookies affect our business relationships, please reach out to us.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>21. Cookie Policy for Third-Party Services</h3>
+                <p>We may use third-party services that set cookies on our website. These services may include analytics providers, advertising networks, and social media platforms. We do not control these third-party cookies and recommend reviewing their privacy policies for more information. We strive to partner with reputable services that prioritize user privacy. If you have concerns about third-party cookies, please contact us for assistance. We are committed to ensuring that our users are informed about the cookies used on our site.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>22. Cookie Policy for Marketing Communications</h3>
+                <p>Cookies may be used to tailor marketing communications based on your preferences and browsing behavior. We may use cookies to track the effectiveness of our marketing campaigns and improve our outreach efforts. You can opt-out of targeted advertising cookies through your browser settings or by using the cookie consent manager on our website. We respect your choices regarding marketing communications and strive to provide relevant content. If you have questions about our marketing practices, please contact us.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>23. Cookie Policy for Website Analytics</h3>
+                <p>We use cookies to analyze website traffic and user behavior. This data helps us understand how visitors interact with our site and identify areas for improvement. We may share aggregated data with third-party analytics providers to enhance our services. The information collected through analytics cookies is anonymized and does not identify individual users. If you prefer not to have your data collected for analytics purposes, you can disable performance cookies through your browser settings. We are committed to using data responsibly to enhance user experience.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>24. Cookie Policy for User Experience</h3>
+                <p>Cookies play a crucial role in enhancing user experience on our website. They help us remember your preferences, such as language settings and login information, making your visits more convenient. By using cookies, we can provide a seamless browsing experience tailored to your needs. If you have any suggestions for improving our website or cookie practices, please let us know. We value user feedback and continuously strive to enhance our services. Your experience matters to us, and we appreciate your input.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>25. Cookie Policy for Security</h3>
+                <p>Cookies also contribute to the security of our website. They help us detect and prevent fraudulent activity and ensure that our services are used in accordance with our terms. Security cookies are essential for protecting user accounts and sensitive information. We take data security seriously and implement measures to safeguard your information. If you have concerns about the security of your data or cookies, please contact us. We are committed to maintaining a secure online environment for all users.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>26. Cookie Policy for User Consent</h3>
+                <p>We obtain user consent for non-essential cookies through our cookie consent manager. This ensures that users have control over their cookie preferences and can make informed choices. Consent is recorded and managed in compliance with applicable data protection laws. Users can change their preferences at any time through the consent manager. We are dedicated to transparency and user empowerment regarding cookie usage. If you have questions about how we obtain consent, please reach out to us.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>27. Cookie Policy for Data Retention</h3>
+                <p>We retain cookie data only for as long as necessary to fulfill the purposes outlined in this policy. Data retention periods vary based on the type of cookie and its purpose. We regularly review our data retention practices to ensure compliance with legal requirements. Users can request deletion of their cookie data through our privacy contact. We are committed to responsible data management and ensuring that your information is handled appropriately. If you have questions about data retention, please contact us.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>28. Cookie Policy for User Rights</h3>
+                <p>As a user, you have rights regarding your personal data collected through cookies. These rights include access, rectification, erasure, and objection to processing. You can exercise these rights through our cookie consent manager or by contacting us directly. We are committed to respecting your rights and ensuring that you have control over your data. If you have questions about your rights or how to exercise them, please reach out to us. Your privacy is important to us, and we are here to assist you.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>29. Cookie Policy for Changes and Updates</h3>
+                <p>We may update this cookie policy periodically to reflect changes in our practices or legal requirements. When we make significant changes, we will notify users through our website or other communication channels. The "Last Updated" date at the top indicates when the policy was last revised. We encourage users to review this policy regularly to stay informed about our cookie practices. Your continued use of our website after changes constitutes acceptance of the updated policy. If you have questions about changes, please contact us.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>30. Cookie Policy for User Engagement</h3>
+                <p>We encourage user engagement and feedback regarding our cookie policy. If you have suggestions for improvement or concerns about our practices, please reach out to us. We value your input and strive to create a positive user experience. Your feedback helps us enhance our services and ensure that we meet user expectations. We appreciate your engagement and look forward to hearing from you. Contact us through our website or customer service channels.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>31. Cookie Policy for Transparency</h3>
+                <p>Transparency is a core principle of our cookie policy. We aim to provide clear and accessible information about how cookies are used on our website. Our cookie consent manager allows users to make informed choices about their cookie preferences. We are committed to being open about our practices and ensuring that users understand how their data is collected and used. If you have questions about our transparency efforts, please contact us. We appreciate your interest in our policies.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>32. Cookie Policy for User Trust</h3>
+                <p>Building user trust is essential to our operations. We take data privacy seriously and implement measures to protect user information collected through cookies. Our cookie policy is designed to foster trust by being transparent about our practices and respecting user choices. We are committed to maintaining a secure and trustworthy online environment. If you have concerns about your trust in our practices, please reach out to us. We value your trust and are dedicated to addressing any issues.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>33. Cookie Policy for User Education</h3>
+                <p>We believe in educating our users about cookies and their implications. Our website provides resources and information to help users understand how cookies work and how they can manage their preferences. We encourage users to take an active role in their online privacy. If you have questions about cookies or need assistance, please contact us. We are here to help you navigate your cookie choices and enhance your online experience.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>34. Cookie Policy for User Feedback</h3>
+                <p>Your feedback is invaluable to us. We welcome comments and suggestions regarding our cookie policy and practices. If you have ideas for improvement or concerns about our usage of cookies, please reach out to us. We take user feedback seriously and use it to enhance our services. Your input helps us create a better experience for all users. Contact us through our website or customer service channels to share your thoughts.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>35. Cookie Policy for User Rights Awareness</h3>
+                <p>We are committed to raising awareness about user rights regarding cookies and personal data. Our cookie policy outlines your rights and how to exercise them. We encourage users to familiarize themselves with their rights and take action if needed. If you have questions about your rights or how we handle your data, please contact us. We are dedicated to ensuring that you are informed and empowered regarding your online privacy.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>36. Cookie Policy for User Support</h3>
+                <p>Our customer support team is available to assist you with any questions or concerns regarding our cookie policy. If you need help managing your cookie preferences or understanding our practices, please reach out to us. We are committed to providing timely and helpful support to our users. Your satisfaction is important to us, and we strive to address your inquiries effectively. Contact us through our website or customer service channels for assistance.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>37. Cookie Policy for User Engagement Initiatives</h3>
+                <p>We are actively engaged in initiatives to promote user awareness and understanding of cookies. Our website features educational resources and tools to help users make informed choices. We encourage users to participate in discussions about online privacy and cookie usage. If you have ideas for engagement initiatives or want to collaborate, please contact us. We value community involvement and are open to partnerships that promote user education.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>38. Cookie Policy for User-Centric Approach</h3>
+                <p>Our cookie policy is designed with a user-centric approach, prioritizing user preferences and privacy. We strive to create a positive user experience by providing clear information and options for managing cookies. Your comfort and trust are essential to us, and we are committed to respecting your choices. If you have suggestions for enhancing our user-centric approach, please reach out to us. We appreciate your feedback and are dedicated to continuous improvement.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>39. Cookie Policy for Future Developments</h3>
+                <p>As technology evolves, our cookie policy may also change to reflect new practices and regulations. We are committed to staying informed about industry developments and adapting our policies accordingly. Users will be notified of significant changes through our website and communication channels. We encourage users to stay engaged and informed about our cookie practices. If you have questions about future developments, please contact us. We value your interest in our policies and practices.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>40. Final Thoughts on Our Cookie Policy</h3>
+                <p>Thank you for taking the time to read our cookie policy. We appreciate your interest in understanding how we use cookies and your rights regarding your data. If you have any questions or concerns, please do not hesitate to reach out to us. We are committed to transparency, user empowerment, and providing a positive online experience. Your feedback is important to us, and we look forward to serving you. Together, we can create a secure and user-friendly online environment.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent">
+        <p>We use cookies to enhance your experience on our website. By clicking "Accept," you consent to our use of cookies. You can manage your preferences at any time.</p>
+        <div class="cookie-consent-buttons">
+            <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Accept</button>
+            <button class="cookie-btn cookie-btn-decline" onclick="declineCookies()">Decline</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 AquaNestle Irrigation Services. All rights reserved.</p>
+            <p>Address: Metrotech Center, Brooklyn, NY 11201, USA</p>
+            <p>Phone: (123) 456-7890</p>
+        </div>
+    </footer>
+
+    <script>
+        function acceptCookies() {
+            // Logic to accept cookies
+            document.querySelector('.cookie-consent').style.display = 'none';
+        }
+
+        function declineCookies() {
+            // Logic to decline cookies
+            document.querySelector('.cookie-consent').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

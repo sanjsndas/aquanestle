@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaNestle Irrigation Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom CSS */
+        :root {
+            --primary-color: #4fc3f7;
+            --secondary-color: #81d4fa;
+            --accent-color: #0288d1;
+            --text-color: #333;
+            --light-bg: #f5fdff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--light-bg);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .nav-link {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent-color);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.02);
+        }
+        
+        .water-drop {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: var(--primary-color);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: drip 3s infinite;
+        }
+        
+        @keyframes drip {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+            100% { transform: translateY(0); }
+        }
+        
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem 0;
+        }
+        
+        .content-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .image-gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+        
+        .consultant-box {
+            background-color: var(--light-bg);
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .tip-box {
+            background-color: #fff9c4;
+            border-left: 4px solid #ffd600;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .disclaimer {
+            font-size: 0.8rem;
+            color: #666;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .satisfaction-meter {
+            height: 20px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+        
+        .satisfaction-level {
+            height: 100%;
+            width: 95%;
+            background: linear-gradient(90deg, #4caf50, #8bc34a);
+            border-radius: 10px;
+            animation: fill 2s ease-in-out;
+        }
+        
+        @keyframes fill {
+            from { width: 0%; }
+            to { width: 95%; }
+        }
+        
+        .service-img {
+            height: 180px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="water-drop mr-4"></div>
+                    <span class="text-xl font-semibold text-gray-800">AquaNestle</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"class="nav-link text-blue-600 font-medium"  aria-current="page" tabindex="0">Home</a>
+                    <a href="privacy.html" class="nav-link text-gray-600 hover:text-blue-600" tabindex="0">Privacy</a>
+                    <a href="terms.html" class="nav-link text-gray-600 hover:text-blue-600"tabindex="0">Terms & Conditions</a>
+                    <a href="cookies.html" class="nav-link text-gray-600 hover:text-blue-600" tabindex="0">Cookies</a>
+                    <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600" tabindex="0">Contact Us</a>
+                </div>
+                <button class="md:hidden text-gray-500 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">AquaNestle Irrigation Services</h1>
+            <p class="text-xl mb-8">"Every drop, lovingly placed."</p>
+            <button class="bg-white text-blue-600 font-semibold py-2 px-6 rounded-full hover:bg-blue-50 transition duration-300">
+                Get Your Free Consultation
+            </button>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <!-- About Us Section -->
+        <section class="content-section">
+            <h2 class="text-2xl font-bold mb-4 text-blue-600">About AquaNestle</h2>
+            <p>Welcome to AquaNestle, where we combine the purity of water with the nurturing care of Nestle to bring you the most gentle and efficient irrigation solutions for your home garden. Founded in 2015, we've grown from a small family business to serving thousands of happy customers across the country.</p>
+            
+            <p>Our mission is simple: to help you grow beautiful, thriving gardens while conserving water and making the process effortless. We believe that every plant deserves the right amount of water, delivered with care and precision. With our patented SmartDrop™ technology, we've revolutionized residential irrigation by creating systems that understand your plants' needs better than anyone else in the industry.</p>
+            
+            <div class="image-gallery">
+                <img src="p1.jpeg" alt="Garden irrigation system">
+                <img src="p2.jpeg" alt="Happy gardener">
+                <img src="p3.jpeg" alt="Water conservation">
+            </div>
+            
+            <p>At AquaNestle, we understand that your garden is more than just plants - it's an extension of your home, a place of peace and beauty. That's why we've developed our smart irrigation systems to be as gentle and nurturing as a mother's touch. Our systems monitor soil moisture in real-time, adjusting water flow to match your plants' exact needs throughout the day and across seasons.</p>
+            
+            <p>Our team of 45 irrigation specialists comes from diverse backgrounds in horticulture, engineering, and environmental science, but we all share one common passion: helping plants thrive through intelligent water management. Each member completes over 200 hours of training annually to stay at the forefront of irrigation technology and plant science. We've invested over $2 million in research and development to create irrigation solutions that truly work with nature, not against it.</p>
+        
+        </section>
+
+        <!-- Services Section -->
+        <section class="content-section">
+            <h2 class="text-2xl font-bold mb-6 text-blue-600">Our Comprehensive Irrigation Services</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Smart Irrigation Systems -->
+                <div class="service-card bg-white shadow-md">
+                    <img src="s1.jpeg" alt="Smart Irrigation System" class="service-img">
+                    <div class="p-6">
+                        <div class="text-blue-500 mb-4">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Smart Irrigation Systems</h3>
+                        <p>Our state-of-the-art systems monitor weather conditions and soil moisture to deliver the perfect amount of water exactly when your plants need it. The SmartPro™ controller uses AI to learn your garden's unique requirements and adjust watering schedules automatically. Optional WiFi connectivity lets you monitor and control your system from anywhere via our mobile app.</p>
+                    </div>
+                </div>
+                
+                <!-- Garden Design -->
+                <div class="service-card bg-white shadow-md">
+                    <img src="s2.jpeg" alt="Garden Design" class="service-img">
+                    <div class="p-6">
+                        <div class="text-blue-500 mb-4">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Garden Design & Zoning</h3>
+                        <p>Let our expert designers create a water-efficient garden layout that maximizes beauty while minimizing water usage. We analyze sun exposure, soil conditions, and microclimates to create hydrozones—grouping plants with similar water needs together. Our 3D design renderings help visualize your future garden before installation begins.</p>
+                    </div>
+                </div>
+                
+                <!-- Maintenance Plans -->
+                <div class="service-card bg-white shadow-md">
+                    <img src="s3.jpeg" alt="Maintenance Plans" class="service-img">
+                    <div class="p-6">
+                        <div class="text-blue-500 mb-4">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Maintenance Plans</h3>
+                        <p>Our comprehensive maintenance plans ensure your irrigation system runs perfectly year-round with seasonal adjustments. Our Gold, Platinum, and Diamond plans include everything from spring startup to winterization, with regular system checkups, pressure testing, head cleaning and recalibration. All plans include priority service scheduling and 24/7 emergency support.</p>
+                    </div>
+                </div>
+                
+                <!-- Drip Irrigation -->
+                <div class="service-card bg-white shadow-md">
+                    <img src="s4.jpeg" alt="Drip Irrigation" class="service-img">
+                    <div class="p-6">
+                        <div class="text-blue-500 mb-4">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Custom Drip Irrigation</h3>
+                        <p>Precision drip systems deliver water directly to plant roots with 90% efficiency. Our micro-irrigation solutions are perfect for vegetable gardens, landscaped beds, and container plants. We offer pressure-compensating emitters, adjustable flow drippers, and micro-sprayers in various patterns. Customizable for any garden layout, our systems ensure that every plant receives the right amount of water without waste.</p>
+                    </div>
+                </div>
+                
+                <!-- Rainwater Harvesting -->
+                <div class="service-card bg-white shadow-md">
+                    <img src="s5.jpeg" alt="Rainwater Harvesting" class="service-img">
+                    <div class="p-6">
+                        <div class="text-blue-500 mb-4">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18M3 18h18"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Rainwater Harvesting Systems</h3>
+                        <p>Capture and utilize rainwater for irrigation with our efficient rainwater harvesting systems. We design and install systems that include gutters, downspouts, and storage tanks, allowing you to reduce your water bill and promote sustainability. Our systems can be integrated with existing irrigation setups for seamless operation.</p>
+                    </div>
+                </div>
+                
+                <!-- Landscape Lighting -->
+                <div class="service-card bg-white shadow-md">
+                    <img src="s6.jpeg" alt="Landscape Lighting" class="service-img">
+                    <div class="p-6">
+                        <div class="text-blue-500 mb-4">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Landscape Lighting Solutions</h3>
+                        <p>Enhance your garden's beauty and safety with our landscape lighting solutions. We offer energy-efficient LED lighting options that highlight your plants and pathways while providing security. Our designs are tailored to complement your garden's aesthetics and can be integrated with your irrigation system for automated operation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consultant Section -->
+        <section class="content-section">
+            <h2 class="text-2xl font-bold mb-4 text-blue-600">Expert Consultation</h2>
+            <div class="consultant-box">
+                <h3 class="text-xl font-semibold mb-2">Why Choose Our Consultation Services?</h3>
+                <p>With over 60,000 words of expert knowledge distilled into our consultation services, we provide the most comprehensive irrigation advice in the industry. Our consultants have helped transform thousands of gardens across the country, from small urban balconies to expansive country estates.</p>
+                
+                <p>During your consultation, we'll cover:</p>
+                <ul class="list-disc pl-5 mt-2 mb-4">
+                    <li>Soil analysis and water retention capabilities</li>
+                    <li>Plant-specific water requirements</li>
+                    <li>Seasonal irrigation adjustments</li>
+                    <li>Water conservation techniques</li>
+                    <li>System customization options</li>
+                    <li>Long-term maintenance planning</li>
+                </ul>
+                
+                <p>Our consultations typically last 2-3 hours and include a detailed written report with recommendations tailored specifically to your garden's needs. We don't believe in one-size-fits-all solutions - every garden is unique, and your irrigation system should reflect that.</p>
+                
+                
+                <p>What sets our consultation apart is the depth of knowledge we bring. Our team continuously updates their expertise through ongoing training and research. We monitor the latest developments in irrigation technology, water conservation methods, and plant science to ensure our recommendations are always at the cutting edge.</p>
+                
+                <p>After your consultation, you'll receive ongoing support as part of our service. Have questions six months later? We're just a phone call or email away. Your satisfaction is our priority, and we stand behind our recommendations with a satisfaction guarantee.</p>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="content-section">
+            <h2 class="text-2xl font-bold mb-4 text-blue-600">Expert Irrigation Tips</h2>
+            
+            <div class="tip-box">
+                <h3 class="text-xl font-semibold mb-2">Watering in the Early Morning</h3>
+                <p>The best time to water your plants is early in the morning, between 5 AM and 9 AM. This allows the water to reach the roots before the heat of the day causes evaporation. Morning watering also helps prevent fungal diseases that can occur when plants remain damp overnight.</p>
+            </div>
+            
+            <div class="tip-box">
+                <h3 class="text-xl font-semibold mb-2">Deep Watering vs. Frequent Light Watering</h3>
+                <p>Most plants benefit from deep, infrequent watering rather than frequent light sprinklings. Deep watering encourages roots to grow downward, creating stronger, more drought-resistant plants. A general rule is to water until the soil is moist 6-12 inches deep, depending on the plant type.</p>
+            </div>
+            
+            <div class="tip-box">
+                <h3 class="text-xl font-semibold mb-2">Mulching for Moisture Retention</h3>
+                <p>A 2-3 inch layer of organic mulch (like wood chips or straw) around your plants can reduce water evaporation from the soil by up to 70%. Mulch also regulates soil temperature and suppresses weeds that compete with your plants for water.</p>
+            </div>
+            
+        </section>
+
+        <!-- Feedback Section -->
+        <section class="content-section">
+            <h2 class="text-2xl font-bold mb-4 text-blue-600">Customer Feedback</h2>
+            <div class="testimonial-card p-4 mb-4">
+                <p>"AquaNestle transformed my garden! Their consultation was thorough, and the irrigation system they installed has saved me so much time and water. Highly recommend!"</p>
+                <p class="text-right font-semibold">- Sarah J.</p>
+            </div>
+            <div class="testimonial-card p-4 mb-4">
+                <p>"I was struggling with my garden's water needs, but AquaNestle's team provided excellent advice and support. My plants have never looked better!"</p>
+                <p class="text-right font-semibold">- Mark T.</p>
+            </div>
+            <div class="testimonial-card p-4 mb-4">
+                <p>"The best investment I made for my home garden. Their smart irrigation system is efficient and easy to use!"</p>
+                <p class="text-right font-semibold">- Emily R.</p>
+            </div>
+        </section>
+
+        <!-- Disclaimer Section -->
+        <section class="content-section">
+            <h2 class="text-2xl font-bold mb-4 text-blue-600">Disclaimer</h2>
+            <p>The information provided by AquaNestle is for general informational purposes only. All information on the site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the site.</p>
+        </section>
+
+        <!-- Customer Satisfaction Section -->
+        <section class="content-section">
+            <h2 class="text-2xl font-bold mb-4 text-blue-600">Customer Satisfaction</h2>
+            <p>At AquaNestle, we strive for excellence in every service we provide. Our customer satisfaction meter shows our commitment to ensuring that every client is happy with their irrigation solutions.</p>
+            <div class="satisfaction-meter">
+                <div class="satisfaction-level"></div>
+            </div>
+            <p>We value your feedback and continuously work to improve our services. Your satisfaction is our top priority!</p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 AquaNestle Irrigation Services. All rights reserved.</p>
+            <p>Address: Metrotech Center, Brooklyn, NY 11201, USA</p>
+        </div>
+    </footer>
+</body>
+</html>

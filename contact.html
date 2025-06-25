@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact AquaNestle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom CSS - Same as index page */
+        :root {
+            --primary-color: #4fc3f7;
+            --secondary-color: #81d4fa;
+            --accent-color: #0288d1;
+            --text-color: #333;
+            --light-bg: #f5fdff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--light-bg);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .nav-link {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent-color);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .water-drop {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: var(--primary-color);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: drip 3s infinite;
+        }
+        
+        @keyframes drip {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+            100% { transform: translateY(0); }
+        }
+        
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem 0;
+        }
+        
+        .content-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .policy-point {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .policy-point h3 {
+            font-size: 1.25rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-form {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-input:focus {
+            border-color: var(--accent-color);
+            outline: none;
+        }
+        
+        .submit-btn {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: #0277bd;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="water-drop mr-4"></div>
+                    <span class="text-xl font-semibold text-gray-800">AquaNestle</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600" tabindex="0">Home</a>
+                    <a href="privacy.html" class="nav-link text-gray-600 hover:text-blue-600" tabindex="0">Privacy</a>
+                    <a href="terms.html" class="nav-link text-gray-600 hover:text-blue-600" tabindex="0">Terms & Conditions</a>
+                    <a href="cookies.html" class="nav-link text-gray-600 hover:text-blue-600" tabindex="0">Cookies</a>
+                    <a href="contact.html" class="nav-link text-blue-600 font-medium" aria-current="page" tabindex="0">Contact Us</a>
+                </div>
+                <button class="md:hidden text-gray-500 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round", stroke-linejoin="round", stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact AquaNestle</h1>
+            <p class="text-xl mb-8">We're here to help with all your irrigation needs</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <!-- Contact Form -->
+        <section class="content-section contact-form">
+            <h2 class="text-2xl font-bold mb-6 text-blue-600">Send Us a Message</h2>
+            <form id="contactForm">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="subject" class="form-label">Subject</label>
+                    <select id="subject" name="subject" class="form-input" required>
+                        <option value="">Select a subject</option>
+                        <option value="consultation">Free Consultation</option>
+                        <option value="service">Service Request</option>
+                        <option value="technical">Technical Support</option>
+                        <option value="billing">Billing Inquiry</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="form-label">Your Message</label>
+                    <textarea id="message" name="message" rows="5" class="form-input" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="content-section">
+            <h2 class="text-2xl font-bold mb-6 text-blue-600">Comprehensive Contact Information</h2>
+            
+            <div class="policy-point">
+                <h3>1. Main Office Address</h3>
+                <p>AquaNestle's headquarters is located at Metrotech Center in Brooklyn, New York. Our main office is open Monday through Friday from 9:00 AM to 5:00 PM EST. The building features full accessibility for visitors with disabilities. Parking is available in the adjacent garage. Please check in with reception upon arrival for all scheduled meetings. We recommend contacting us in advance if you plan to visit, as some areas require security clearance.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>2. Phone Contacts</h3>
+                <p>Our main customer service line is (123) 456-7890, available Monday-Friday 8AM-6PM EST. For technical support, dial extension 2. Sales inquiries can reach extension 3. Emergency service calls after hours will be routed to our on-call technicians. For corporate offices, please dial extension 5. International customers should dial +1-123-456-7890. All calls may be recorded for quality assurance and training purposes.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>3. Email Communications</h3>
+                <p>For general inquiries, email info@aquanestle.com. Technical support requests should be sent to support@aquanestle.com. Sales inquiries go to sales@aquanestle.com. Press and media relations contact press@aquanestle.com. For partnership opportunities, email partnerships@aquanestle.com. We strive to respond to all emails within 24-48 hours during business days. Please include detailed information about your inquiry to help us respond effectively.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>4. Emergency Services</h3>
+                <p>For irrigation emergencies that could cause property damage, call our 24/7 emergency line at (123) 456-7890 (press 9 when prompted). Emergency services include major leaks, system failures, and storm damage response. Our average emergency response time is under 2 hours in most metropolitan areas. After-hours service calls may incur additional charges. Please have your system details and service history available when calling.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>5. Customer Service Hours</h3>
+                <p>Our customer service department operates Monday through Friday from 8:00 AM to 6:00 PM EST, and Saturdays from 10:00 AM to 3:00 PM EST. Holiday hours may vary. The department handles billing inquiries, service scheduling, product questions, and general account management. During peak seasons, wait times may be longer than usual. We recommend using our online account portal for many routine inquiries.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>6. Technical Support</h3>
+                <p>Technical support is available Monday-Friday 7AM-7PM EST at (123) 456-7890 extension 2. Our support team can assist with system diagnostics, troubleshooting, and minor repairs over the phone. For complex issues, remote system access may be available for SmartControl™ customers. Have your system model number and installation date ready when calling. Average wait time is under 10 minutes during normal business hours.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>7. Sales Department</h3>
+                <p>Contact our sales team at (123) 456-7890 extension 3 or sales@aquanestle.com. Working hours are Monday-Friday 8:30AM-5:30PM EST. Our representatives can provide product information, system comparisons, and quotes for new installations. Free consultations are available by appointment. Bulk pricing for contractors and property managers is available upon request with verification of business credentials.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>8. Billing Inquiries</h3>
+                <p>For questions about invoices, payments, or account statements, call (123) 456-7890 extension 4 or email billing@aquaenestle.com. Available Monday-Friday 8AM-5PM EST. Have your account number or recent invoice ready for faster service. Payment arrangements can be discussed with our billing specialists. Paperless billing options are available through our customer portal. Late payments may be subject to service interruption.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>9. Service Area Coverage</h3>
+                <p>AquaNestle currently services all 50 states in the U.S. with full installation and maintenance crews in 35 metropolitan areas. Remote monitoring services are available nationwide. International inquiries should contact our global partnerships department. Service response times vary by location - urban areas typically see technicians within 48 hours, while rural areas may take up to 5 business days for non-emergency service.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>10. Corporate Offices</h3>
+                <p>Our corporate headquarters are located at Metrotech Center, Brooklyn, NY 11201. The executive offices include departments for Finance, Human Resources, Research & Development, and Marketing. Media inquiries should be directed to our PR department. Vendors and suppliers can contact our procurement office. Investment relations inquiries go through our investor services department. Building access requires prior appointment.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>11. International Contacts</h3>
+                <p>For international inquiries outside the United States, contact international@aquanestle.com or call +1-123-456-7890 (international rates apply). Our global support team is available Monday-Friday 6:00 AM to 6:00 PM EST to accommodate time zone differences. We currently partner with regional providers in Canada, the UK, and Australia. Licensing inquiries for other countries should include detailed market information.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>12. Social Media</h3>
+                <p>Connect with us on Facebook (@AquaNestleOfficial), Twitter (@AquaNestleHQ), and Instagram (@AquaNestle). Our social media team monitors accounts daily from 9AM-5PM EST. These platforms are great for general questions, sharing your irrigation successes, and seeing customer projects. For service issues, please contact support directly rather than through social media. We often feature customer stories and irrigation tips on our channels.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>13. Live Chat Support</h3>
+                <p>Our website offers live chat support Monday-Friday 9AM-5PM EST. Look for the chat icon in the bottom right corner of your screen. Live chat connects you directly with a customer service representative for quick answers to general questions. For technical issues, you may be referred to phone support. Chat transcripts can be emailed to you for reference. Average response time is under 2 minutes during business hours.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>14. Mailing Address</h3>
+                <p>All written correspondence should be sent to AquaNestle Customer Service, PO Box 12345, Brooklyn, NY 11201. Include your full contact information and account number (if applicable) with any mailed inquiries. Allow 7-10 business days for processing mailed requests. For faster service, use our online contact form or call customer service. Payments sent by mail should use the payment stub from your invoice.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>15. Customer Portal</h3>
+                <p>Registered users can access our customer portal at portal.aquanestle.com. The portal allows you to view service history, schedule appointments, make payments, and message your service technician. Mobile apps are available for iOS and Android. Two-factor authentication is required for security. If you need help accessing your account, contact customer service to verify your identity and reset your credentials.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>16. Service Scheduling</h3>
+                <p>Schedule routine service through our customer portal or by calling (123) 456-7890 extension 1. Standard service appointments are available Monday-Friday 8AM-4PM with some Saturday appointments in select areas. Same-day service may be available for urgent issues. A service window of 2 hours will be provided, and technicians will call 30 minutes before arrival. Cancellations require 24-hour notice to avoid fees.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>17. Installation Appointments</h3>
+                <p>New system installations are scheduled through our sales department after completing a site survey and consultation. Installation crews typically work Monday-Friday 7AM-5PM. Most residential installations are completed in 1-2 days. Larger commercial projects are scheduled on a case-by-case basis. A project manager will be assigned to coordinate all aspects of your installation and provide regular updates.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>18. Technical Training</h3>
+                <p>Contractors interested in our certification program should contact training@aquanestle.com. We offer quarterly training sessions at our Brooklyn facility and regional locations. Course schedules and registration are available on our website. CEU credits may be available for certain courses. Training covers installation best practices, system maintenance, and troubleshooting techniques. Participants will receive hands-on experience and access to exclusive resources. Discounts are available for group registrations and returning participants.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>19. Warranty Information</h3>
+                <p>All AquaNestle products come with a standard warranty that covers defects in materials and workmanship. Warranty periods vary by product category, typically ranging from 1 to 5 years. To initiate a warranty claim, contact customer service with your purchase details and product serial number. Warranty claims may require proof of purchase and photos of the defect. Extended warranty options are available for purchase at the time of installation.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>20. Customer Satisfaction</h3>
+                <p>Your satisfaction is our priority. If you are not satisfied with our services, please contact us directly to discuss your concerns. We value your feedback and strive to resolve any issues promptly. Customer satisfaction surveys are sent after service completion to gather your input. We use this feedback to improve our services and training. Our goal is to ensure every customer has a positive experience with AquaNestle.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>21. Community Involvement</h3>
+                <p>AquaNestle is committed to giving back to the community. We participate in local events, sponsor youth sports teams, and support environmental initiatives. If you have a community project or event that aligns with our mission, please reach out to us at community@aquanestle.com. We welcome partnerships that promote sustainability and water conservation. Our employees are encouraged to volunteer and participate in community service activities.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>22. Sustainability Practices</h3>
+                <p>We are dedicated to sustainable practices in our operations and services. AquaNestle promotes water conservation through efficient irrigation solutions. We use eco-friendly materials and methods in our installations. Our team is trained in the latest sustainable technologies to help customers reduce water usage. We also participate in local clean-up efforts and support initiatives that protect natural water resources.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>23. Privacy Policy</h3>
+                <p>Your privacy is important to us. Our Privacy Policy outlines how we collect, use, and protect your personal information. We do not sell or share your information with third parties without your consent. You can review our Privacy Policy on our website for more details. If you have questions about your data or wish to opt-out of communications, please contact us at privacy@aquanestle.com.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>24. Terms of Service</h3>
+                <p>By using our services, you agree to our Terms of Service. These terms outline your rights and responsibilities when using AquaNestle services. We encourage you to read the Terms of Service carefully. If you have questions or need clarification, please reach out to us. Changes to the Terms of Service will be communicated through our website and via email to registered users.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>25. Feedback and Suggestions</h3>
+                <p>We welcome your feedback and suggestions to improve our services. You can submit your ideas through our contact form or email us directly. We review all feedback and consider it in our service development. Your input helps us enhance customer experience and service offerings. We appreciate your time and effort in helping us grow.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>26. FAQs</h3>
+                <p>Visit our FAQ section on the website for answers to common questions about our services, products, and policies. We regularly update this section based on customer inquiries. If you cannot find the answer you need, please contact us directly. Our customer service team is here to assist you with any questions or concerns you may have.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>27. Service Reviews</h3>
+                <p>We encourage customers to leave reviews of our services on our website and social media platforms. Your reviews help other customers make informed decisions and provide us with valuable insights. We monitor all reviews and respond to feedback. Positive or negative, we appreciate your input and strive to address any concerns raised in reviews.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>28. Referral Program</h3>
+                <p>Join our referral program to earn rewards for referring new customers to AquaNestle. For every successful referral, you will receive a discount on your next service. Details about the referral program can be found on our website. We appreciate your support in helping us grow our community of satisfied customers.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>29. Seasonal Promotions</h3>
+                <p>AquaNestle offers seasonal promotions and discounts throughout the year. Keep an eye on our website and social media for announcements about special offers. Promotions may include discounts on services, free consultations, or bundled service packages. Sign up for our newsletter to stay informed about upcoming promotions and events.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>30. Product Catalog</h3>
+                <p>Explore our product catalog online to view the latest irrigation solutions and technologies. Our catalog includes detailed descriptions, specifications, and pricing for each product. If you have questions about specific products, our sales team is available to assist you. We also offer product demonstrations upon request for interested customers.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>31. Installation Guides</h3>
+                <p>For DIY enthusiasts, we provide installation guides and resources on our website. These guides cover various products and systems, offering step-by-step instructions. If you need assistance during installation, our technical support team is available to help. We recommend reviewing the installation guide before starting any project to ensure a smooth process.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>32. Maintenance Tips</h3>
+                <p>Regular maintenance is key to keeping your irrigation system running efficiently. Visit our website for maintenance tips and best practices. We also offer maintenance services for customers who prefer professional assistance. Proper maintenance can extend the life of your system and improve water efficiency. Contact us for a maintenance schedule tailored to your needs.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>33. Water Conservation Tips</h3>
+                <p>Learn how to conserve water with our expert tips available on our website. Simple changes in your irrigation practices can lead to significant water savings. We promote sustainable practices that benefit both your landscape and the environment. Join us in our mission to conserve water and protect our natural resources. Share your water-saving tips with us on social media!</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>34. Community Workshops</h3>
+                <p>AquaNestle hosts community workshops on irrigation best practices and water conservation. These workshops are free and open to the public. Check our website for upcoming dates and locations. Participants will receive hands-on training and resources to implement in their own gardens. We encourage community involvement and knowledge sharing.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>35. Partnerships with Local Businesses</h3>
+                <p>We partner with local businesses to promote sustainable practices and community initiatives. If you are a local business interested in collaborating with AquaNestle, please reach out to us. We believe in supporting our local economy and working together to create a positive impact. Partnership opportunities include joint events, promotions, and community service projects.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>36. Customer Loyalty Program</h3>
+                <p>Join our customer loyalty program to earn points for every service you use. Points can be redeemed for discounts on future services or products. Sign up through our website or during your next service appointment. We appreciate our loyal customers and want to reward you for your continued support. Stay tuned for exclusive offers available only to loyalty program members.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>37. Environmental Responsibility</h3>
+                <p>AquaNestle is committed to environmental responsibility in all aspects of our business. We strive to minimize our carbon footprint and promote eco-friendly practices. Our products are designed to be energy-efficient and reduce water waste. We encourage our customers to adopt sustainable practices in their own homes and businesses. Together, we can make a difference for the environment.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>38. Customer Testimonials</h3>
+                <p>Read testimonials from our satisfied customers on our website. We take pride in our customer service and the quality of our work. Your feedback helps us improve and motivates our team to continue delivering exceptional service. If you would like to share your experience, please contact us. We love hearing from our customers!</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>39. Industry News</h3>
+                <p>Stay informed about the latest industry news and trends by following our blog. We cover topics related to irrigation technology, water conservation, and sustainable practices. Our blog is a valuable resource for both homeowners and professionals in the industry. Subscribe to our newsletter to receive updates directly in your inbox.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>40. Final Thoughts</h3>
+                <p>Thank you for considering AquaNestle for your irrigation needs. We are dedicated to providing high-quality services and products to our customers. If you have any questions or need assistance, please do not hesitate to reach out. We look forward to serving you and helping you achieve your irrigation goals.</p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 AquaNestle Irrigation Services. All rights reserved.</p>
+            <p>Address: Metrotech Center, Brooklyn, NY 11201, USA</p>
+            <p>Phone: (123) 456-7890</p>
+        </div>
+    </footer>
+</body>
+</html>

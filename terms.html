@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaNestle Terms & Conditions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom CSS - Same as index page */
+        :root {
+            --primary-color: #4fc3f7;
+            --secondary-color: #81d4fa;
+            --accent-color: #0288d1;
+            --text-color: #333;
+            --light-bg: #f5fdff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--light-bg);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .nav-link {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent-color);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .water-drop {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: var(--primary-color);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: drip 3s infinite;
+        }
+        
+        @keyframes drip {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+            100% { transform: translateY(0); }
+        }
+        
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem 0;
+        }
+        
+        .content-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .policy-point {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .policy-point h3 {
+            font-size: 1.25rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="water-drop mr-4"></div>
+                    <span class="text-xl font-semibold text-gray-800">AquaNestle</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600" tabindex="0">Home</a>
+                    <a href="privacy.html" class="nav-link text-gray-600 hover:text-blue-600" tabindex="0">Privacy</a>
+                    <a href="terms.html" class="nav-link text-blue-600 font-medium" aria-current="page" tabindex="0">Terms & Conditions</a>
+                    <a href="cookies.html" class="nav-link text-gray-600 hover:text-blue-600" tabindex="0">Cookies</a>
+                    <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-600" tabindex="0">Contact Us</a>
+                </div>
+                <button class="md:hidden text-gray-500 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Terms & Conditions</h1>
+            <p class="text-xl mb-8">Please read these terms carefully before using our services</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <!-- Terms & Conditions Content -->
+        <section class="content-section">
+            <h2 class="text-2xl font-bold mb-6 text-blue-600">AquaNestle Terms of Service</h2>
+            <p class="mb-6">Last Updated: January 1, 2023</p>
+            
+            <p class="mb-8">Welcome to AquaNestle! These Terms of Service ("Terms") govern your access to and use of our website, products, and services ("Services"). Please read these Terms carefully before accessing or using our Services. By accessing or using any part of the Services, you agree to be bound by these Terms.</p>
+
+            <div class="policy-point">
+                <h3>1. Acceptance of Terms</h3>
+                <p>By accessing or using the Services, you agree to be bound by these Terms and all applicable laws and regulations. If you do not agree with any part of these Terms, you must not use the Services. These Terms apply to all visitors, users, and others who access or use the Services. Your continued use of the Services following the posting of changes constitutes your acceptance of those changes. These Terms form a legally binding agreement between you and AquaNestle regarding your use of the Services.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>2. Description of Services</h3>
+                <p>AquaNestle provides smart irrigation solutions for residential and commercial properties, including system installation, maintenance, and related services. Our services may change from time to time without notice. While we strive to provide accurate descriptions, we do not warrant that the descriptions are complete or error-free. Some services may be subject to additional terms and conditions that will be provided at the time of purchase. We reserve the right to modify or discontinue any service at any time.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>3. Account Registration</h3>
+                <p>Certain features of our Services may require account registration. You agree to provide accurate, current, and complete information during registration and to update such information to keep it accurate. You are responsible for maintaining the confidentiality of your account and password and for all activities that occur under your account. You must immediately notify us of any unauthorized use of your account or any other security breach. We reserve the right to refuse service, terminate accounts, or remove content at our discretion.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>4. User Responsibilities</h3>
+                <p>You agree to use our Services only for lawful purposes and in accordance with these Terms. You agree not to use the Services to: (a) violate any laws, (b) infringe on others' rights, (c) interfere with others' use of the Services, (d) attempt to gain unauthorized access to our systems, (e) introduce malware or other harmful code, or (f) engage in fraudulent activities. You are responsible for all content you upload, post, or transmit through the Services. You agree to comply with all applicable local, state, national, and international laws and regulations.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>5. Service Modifications</h3>
+                <p>We reserve the right to modify, suspend, or discontinue the Services (or any part thereof) at any time with or without notice. We will not be liable to you or any third party for any modification, suspension, or discontinuance of the Services. Some changes to our Services may not be reflected in these Terms. We may impose limits on certain features or restrict access to parts or all of the Services without notice. Your continued use of the Services constitutes acceptance of any modifications.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>6. Pricing and Payments</h3>
+                <p>Prices for our Services are subject to change without notice. We reserve the right to modify or discontinue any service without notice. All payments must be made in U.S. dollars unless otherwise specified. You agree to pay all charges incurred by you or any users of your account at the prices in effect when such charges are incurred. You are responsible for all taxes associated with purchases. We may use third-party payment processors to bill you for Services. Recurring payments will continue until canceled.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>7. Cancellation and Refunds</h3>
+                <p>You may cancel your subscription at any time by contacting us. Certain Services may have specific cancellation policies that will be provided at purchase. We reserve the right to issue refunds or credits at our sole discretion. If we issue a refund, we are under no obligation to issue the same or similar refund in the future. Services that involve physical installation may have different cancellation terms that will be outlined in your service agreement. All cancellations are subject to our verification and processing.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>8. Intellectual Property</h3>
+                <p>All content included in the Services, such as text, graphics, logos, images, and software, is our property or the property of our licensors and is protected by copyright and other laws. You may not modify, reproduce, distribute, create derivative works of, publicly display, or in any way exploit any content without our express written permission. You may not reverse engineer or decompile any software included in the Services. Certain trademarks and logos displayed may be owned by third parties.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>9. User Content</h3>
+                <p>You retain ownership of any content you submit, post, or display on or through our Services. By submitting content, you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, adapt, publish, and display such content to provide and promote our Services. You represent that you have necessary rights to grant this license. We may monitor and remove any content at our discretion. You understand that we do not guarantee any confidentiality for content you provide.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>10. Disclaimer of Warranties</h3>
+                <p>The Services are provided "as is" and "as available" without warranties of any kind, either express or implied. We disclaim all warranties, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that the Services will be uninterrupted or error-free, that defects will be corrected, or that the Services are free of viruses or other harmful components. Some jurisdictions do not allow certain warranty disclaimers, so some of these exclusions may not apply to you.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>11. Limitation of Liability</h3>
+                <p>To the maximum extent permitted by law, in no event shall AquaNestle be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the Services. Our total liability for any claims under these Terms shall not exceed the amount you paid us for the Services in the twelve months preceding the claim. These limitations apply even if we have been advised of the possibility of such damages. Some states do not allow certain liability limitations, so some of these limitations may not apply to you.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>12. Indemnification</h3>
+                <p>You agree to defend, indemnify, and hold harmless AquaNestle and its affiliates, officers, employees, and agents from any claims, damages, obligations, losses, liabilities, costs, or expenses arising from: (a) your use of the Services, (b) your violation of these Terms, (c) your violation of any third-party right, or (d) any content you submit. We reserve the right, at your expense, to assume the exclusive defense and control of any matter subject to indemnification. You agree to cooperate with our defense of these claims.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>13. Governing Law</h3>
+                <p>These Terms shall be governed by and construed in accordance with the laws of the State of New York, without regard to its conflict of law provisions. You agree to submit to the personal jurisdiction of the courts located in New York County, New York for any legal actions arising from these Terms. These Terms will not be governed by the United Nations Convention on Contracts for the International Sale of Goods. Our failure to enforce any right or provision will not be considered a waiver of those rights.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>14. Dispute Resolution</h3>
+                <p>Before filing a claim, you agree to try to resolve the dispute informally by contacting support@aquanestle.com. Any disputes arising out of these Terms shall first be settled through mediation administered by the American Arbitration Association. If mediation is unsuccessful, either party may initiate arbitration. The arbitration shall be conducted in New York, NY and judgment may be entered in any court of competent jurisdiction. You waive the right to participate in a class action lawsuit or class-wide arbitration.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>15. Termination</h3>
+                <p>We may terminate or suspend your access to the Services immediately, without prior notice or liability, for any reason, including if you breach these Terms. Upon termination, your right to use the Services will immediately cease. All provisions of these Terms which by their nature should survive termination shall survive, including ownership provisions, warranty disclaimers, indemnity, and limitations of liability. You may terminate your account at any time by discontinuing use of the Services and notifying us.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>16. Force Majeure</h3>
+                <p>We shall not be liable for any failure or delay in performance due to events beyond our reasonable control, including without limitation acts of God, earthquakes, labor disputes, hostilities, governmental actions, utility or telecommunication outages, Internet disturbances, or any other force majeure event. If such an event occurs that affects our performance of these Terms, we will attempt to promptly resume performance. Our obligations shall be deemed suspended during such events.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>17. Changes to Terms</h3>
+                <p>We reserve the right to modify these Terms at any time in our sole discretion. If we make material changes, we will notify you through the Services or by other means to provide you the opportunity to review before they become effective. Your continued use of the Services after any changes constitutes acceptance of the new Terms. You are responsible for regularly reviewing these Terms. Changes to dispute resolution provisions will not apply to disputes of which we had notice before the change.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>18. Third-Party Links</h3>
+                <p>Our Services may contain links to third-party websites or services not owned or controlled by AquaNestle. We do not endorse or assume responsibility for any third-party sites' content, privacy policies, or practices. You acknowledge that we shall not be responsible for any damage or loss caused by use of those third-party sites. When you access third-party sites, you do so at your own risk. We encourage you to read the terms and conditions and privacy policy of any third-party site you visit.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>19. No Agency</h3>
+                <p>No joint venture, partnership, employment, or agency relationship exists between you and AquaNestle as a result of these Terms or your use of the Services. You may not represent that you have any authority to act on our behalf. These Terms do not create any third-party beneficiary rights. Any rights not expressly granted herein are reserved. Our failure to enforce any provision of these Terms shall not be deemed a waiver of our right to enforce such provision.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>20. Compliance with Laws</h3>
+                <p>You agree to comply with all applicable laws, statutes, regulations, and ordinances regarding your use of the Services. You will not use the Services in any manner that violates any applicable local, state, national or international law. You are responsible for compliance with all import and export regulations that apply to your use of the Services. We may limit the availability of our Services in any jurisdiction at any time.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>21. Assignment</h3>
+                <p>You may not assign or transfer these Terms, by operation of law or otherwise, without our prior written consent. Any attempt to do so without such consent will be void. We may assign or transfer these Terms at our discretion without restriction. Subject to the foregoing, these Terms will bind and inure to the benefit of the parties, their successors, and permitted assigns.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>22. Severability</h3>
+                <p>If any provision of these Terms is found to be invalid or unenforceable by a court of competent jurisdiction, the remaining provisions of these Terms will remain in full force and effect. The invalid or unenforceable provision will be deemed modified to the minimum extent necessary to make it valid and enforceable. The parties agree that these Terms shall be construed as if the invalid or unenforceable provision had never been contained herein.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>23. Waiver</h3>
+                <p>No waiver of any term of these Terms shall be deemed a further or continuing waiver of such term or any other term, and any failure of AquaNestle to assert a right or provision under these Terms shall not constitute a waiver of such right or provision. Any waiver must be in writing and signed by an authorized representative of AquaNestle to be effective.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>24. Entire Agreement</h3>
+                <p>These Terms constitute the entire agreement between you and AquaNestle regarding your use of the Services and supersede any prior agreements between you and AquaNestle regarding the Services. Any failure to enforce any provision of these Terms shall not be deemed a waiver of such provision or any other provision. The headings in these Terms are for convenience only and have no legal or contractual effect.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>25. Contact Information</h3>
+                <p>If you have any questions about these Terms, please contact us:</p>
+                <p>Email: support@aquanestle.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Address: Metrotech Center, Brooklyn, NY 11201, USA</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>26. User Feedback</h3>
+                <p>We welcome your feedback, comments, and suggestions for improvements to the Services. You can submit feedback by contacting us at the email address provided above. By submitting feedback, you grant us the right to use your feedback without any obligation to you. We may use your feedback for any purpose, including but not limited to improving our Services.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>27. Marketing Communications</h3>
+                <p>By using our Services, you consent to receive marketing communications from us. You may opt-out of receiving marketing communications at any time by following the unsubscribe instructions included in those communications. Please note that even if you opt-out, we may still send you non-promotional communications regarding your account or our ongoing business relations.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>28. Third-Party Services</h3>
+                <p>Our Services may include links to third-party websites or services that are not owned or controlled by AquaNestle. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party sites or services. You acknowledge and agree that AquaNestle shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of any such content, goods, or services available on or through any such sites or services.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>29. Data Protection</h3>
+                <p>We take the privacy and security of your personal information seriously. Our Privacy Policy explains how we collect, use, and protect your personal information. By using our Services, you consent to the collection and use of your personal information in accordance with our Privacy Policy. We encourage you to review our Privacy Policy to understand our practices regarding your personal information.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>30. Electronic Communications</h3>
+                <p>By using our Services, you consent to receive communications from us electronically. We will communicate with you by email or by posting notices on the Services. You agree that all agreements, notices, disclosures, and other communications that we provide to you electronically will satisfy any legal requirement that such communications be in writing.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>31. User Conduct</h3>
+                <p>You agree not to engage in any conduct that restricts or inhibits anyone's use or enjoyment of the Services, or which, as determined by us, may harm AquaNestle or users of the Services or expose them to liability. You agree not to use the Services in any manner that could disable, overburden, damage, or impair the Services or interfere with any other party's use of the Services, including their ability to engage in real-time activities through the Services.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>32. No Warranty for Third-Party Services</h3>
+                <p>We do not warrant, endorse, guarantee, or assume responsibility for the accuracy or reliability of any information or content provided by third parties through the Services. We are not responsible for any loss or damage of any kind incurred as a result of your reliance on such information or content. You should conduct your own research and exercise caution when using third-party services.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>33. User Disputes</h3>
+                <p>You are solely responsible for your interactions with other users of the Services. We reserve the right, but have no obligation, to monitor disputes between you and other users. We are not responsible for any loss or damage incurred as a result of any such interactions. If you have a dispute with one or more users, you release us from any claims, demands, and damages of every kind arising out of or in any way connected with such disputes.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>34. No Class Actions</h3>
+                <p>You agree that any dispute arising out of or related to these Terms or the Services will be conducted only on an individual basis and not in a class, consolidated, or representative action. You agree to waive any right to a jury trial or to participate in a class action lawsuit. This provision is intended to ensure that disputes are resolved efficiently and fairly.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>35. Headings</h3>
+                <p>The headings in these Terms are for convenience only and have no legal or contractual effect. They do not affect the interpretation of these Terms. The use of the word "including" in these Terms is illustrative and not limiting. The word "or" is used in the inclusive sense.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>36. Survival</h3>
+                <p>All provisions of these Terms which by their nature should survive termination shall survive, including but not limited to ownership provisions, warranty disclaimers, indemnity, and limitations of liability. The provisions of these Terms that are intended to survive termination will remain in effect after termination of your access to the Services.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>37. Force Majeure</h3>
+                <p>We shall not be liable for any failure to perform our obligations under these Terms if such failure results from any cause beyond our reasonable control, including but not limited to mechanical, electronic, or communications failure or degradation. If we are unable to perform our obligations due to a force majeure event, we will notify you as soon as possible and will take reasonable steps to resume performance.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>38. No Waiver</h3>
+                <p>No waiver of any term of these Terms shall be deemed a further or continuing waiver of such term or any other term, and any failure of AquaNestle to assert a right or provision under these Terms shall not constitute a waiver of such right or provision. Any waiver must be in writing and signed by an authorized representative of AquaNestle to be effective.</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>39. Contact Us</h3>
+                <p>If you have any questions about these Terms, please contact us:</p>
+                <p>Email: support@aquanestle.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Address: Metrotech Center, Brooklyn, NY 11201, USA</p>
+            </div>
+            
+            <div class="policy-point">
+                <h3>40. Final Provisions</h3>
+                <p>These Terms constitute the entire agreement between you and AquaNestle regarding your use of the Services and supersede any prior agreements between you and AquaNestle regarding the Services. If any provision of these Terms is found to be invalid or unenforceable , the remaining provisions will remain in full force and effect. The invalid or unenforceable provision will be deemed modified to the minimum extent necessary to make it valid and enforceable. The parties agree that these Terms shall be construed as if the invalid or unenforceable provision had never been contained herein.</p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 AquaNestle Irrigation Services. All rights reserved.</p>
+            <p>Address: Metrotech Center, Brooklyn, NY 11201, USA</p>
+            <p>Phone: (123) 456-7890</p>
+        </div>
+    </footer>
+</body>
+</html>
